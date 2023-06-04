@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %} 
+<html>
+<head>
+  <title>Page d'accueil</title>
+  <style>
+    /* Style de l'en-tête */
+    header {
+      background-color: #f2f2f2;
+    }
+
+    /* Style de la barre de navigation */
+    nav {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style des éléments de la barre de navigation */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Utilisation de Flexbox pour la disposition horizontale */
+    }
+
+    nav li {
+      margin-right: 10px;
+    }
+
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+    }
+
+    /* Style du logo */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer img {
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'accueil' %}">Accueil</a></li>
+        <li><a href="{% url 'inscription' %}">Inscription</a></li>
+        <li><a href="{% url 'import_data' %}">Import Data</a></li>
+        <li><a href="{% url 'createvehicle' %}">Create Vehicle</a></li>
+        <li><a href="{% url 'recommendation' %}">Recommandation</a></li>  <!-- Nouvel onglet de recommandation -->
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Bienvenue sur la page d'accueil</h2>
+  <p>Pour accéder à votre compte, veuillez vous connecter :</p>
+  <a href="{% url 'login' %}">Page de connexion</a>
+
+  <footer>
+    <!-- Logo en bas de page -->
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+  </footer>
+
+</body>
+</html>

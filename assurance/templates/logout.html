@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page de déconnexion</title>
+</head>
+<body>
+  <h2>Déconnexion</h2>
+  <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <p>Êtes-vous sûr de vouloir vous déconnecter?</p>
+    <button type="submit">Se déconnecter</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Info enregistrée</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #777;
+    }
+
+    .success-message {
+      margin-top: 50px;
+      font-size: 20px;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Recommendation</h2>
+  <a href="{% url 'success_recommendation' %}">Success Recommendation</a>
+
+  <p>Nous te proposerons une assurance adéquate</p>
+  <div class="success-message">
+    <!-- Affichez ici un message personnalisé si nécessaire -->
+    Votre véhicule a été ajouté avec succès !
+  </div>
+</body>
+</html>

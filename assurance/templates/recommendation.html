@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quelle est votre situation?</title>
+</head>
+<body>
+    <h2>Ajouter vos informations</h2>
+    <form method="post" action="{% url 'success_recommendation' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Ajouter">
+    </form>
+</body>
+</html>
